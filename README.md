@@ -2,6 +2,6 @@
 a tool that can convert jdu mainscene into offline bundle
 (only for pc now)
 # Credits
-augustodoidin
-aluigi
+augustodoidin,
+aluigi,
 xpozed
