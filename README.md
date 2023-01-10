@@ -1,5 +1,5 @@
 ## mainscene2bundle
-a tool that can convert jdu mainscene into offline bundle
+a tool that can convert jdu mainscene into offline bundle,
 supports pc and nx
 # How to use?
 in input paste nohud(.webm),audio(.ogg) and name it as a mapname of song that you want to port,
