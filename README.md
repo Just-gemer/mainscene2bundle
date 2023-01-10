@@ -9,6 +9,7 @@ after that go to output and pack your mapname_pc folder into ipk,
 done
 # Credits
 augustodoidin,
+kirbymasta,
 aluigi,
 xpozed,
 rama(for idea)
