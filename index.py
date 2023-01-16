@@ -2766,6 +2766,7 @@ if platform == "pc":
     os.rmdir('output//temp//cache//itf_cooked//pc//world//maps//'+mapnamelow+'//videoscoach')
 elif platform == "nx":
     # making directories(credits:kirbymasta)
+    output = (os.getcwd() + "\\output\\" + mapname.lower() + "_nx")
     #Cache Folder
     cache_path = (output + "\\cache\\itf_cooked\\nx\\world\\maps\\" + mapname.lower() + "\\")
     os.makedirs(cache_path, exist_ok=True)
@@ -2794,6 +2795,8 @@ elif platform == "nx":
     os.makedirs(world_path, exist_ok=True)
     world_moves = (world_path + "timeline\\moves\\wiiu\\")
     os.makedirs(world_moves, exist_ok=True)
+    world_audio = (world_path + "audio\\")
+    os.makedirs(world_audio, exist_ok=True)
     world_videoscoach = (world_path + "videoscoach\\")
     os.makedirs(world_videoscoach, exist_ok=True)
     #World Folder
@@ -3021,7 +3024,7 @@ elif platform == "nx":
 			</Actor>
 		</ACTORS>
 		<ACTORS NAME="Actor">
-			<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_map_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+			<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_banner_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
 				<COMPONENTS NAME="MaterialGraphicComponent">
 					<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
 						<PrimitiveParameters>
@@ -3033,7 +3036,7 @@ elif platform == "nx":
 						<material>
 							<GFXMaterialSerializable ATL_Channel="0" ATL_Path="" shaderPath="world/_common/matshader/multitexture_1layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 								<textureSet>
-									<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_map_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
+									<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_banner_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
 								</textureSet>
 								<materialParams>
 									<GFXMaterialSerializableParam Reflector_factor="0.000000" />
@@ -3205,7 +3208,7 @@ elif platform == "nx":
 			</Actor>
 		</ACTORS>
 		<ACTORS NAME="Actor">
-			<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_map_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+			<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_banner_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
 				<COMPONENTS NAME="MaterialGraphicComponent">
 					<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
 						<PrimitiveParameters>
@@ -3217,7 +3220,7 @@ elif platform == "nx":
 						<material>
 							<GFXMaterialSerializable ATL_Channel="0" ATL_Path="" shaderPath="world/_common/matshader/multitexture_1layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 								<textureSet>
-									<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_map_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
+									<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_banner_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
 								</textureSet>
 								<materialParams>
 									<GFXMaterialSerializableParam Reflector_factor="0.000000" />
@@ -3414,7 +3417,7 @@ elif platform == "nx":
 			</Actor>
 		</ACTORS>
 		<ACTORS NAME="Actor">
-			<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_map_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+			<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_banner_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
 				<COMPONENTS NAME="MaterialGraphicComponent">
 					<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
 						<PrimitiveParameters>
@@ -3426,7 +3429,7 @@ elif platform == "nx":
 						<material>
 							<GFXMaterialSerializable ATL_Channel="0" ATL_Path="" shaderPath="world/_common/matshader/multitexture_1layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 								<textureSet>
-									<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_map_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
+									<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_banner_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
 								</textureSet>
 								<materialParams>
 									<GFXMaterialSerializableParam Reflector_factor="0.000000" />
@@ -3648,7 +3651,7 @@ elif platform == "nx":
 			</Actor>
 		</ACTORS>
 		<ACTORS NAME="Actor">
-			<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_map_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+			<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_banner_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
 				<COMPONENTS NAME="MaterialGraphicComponent">
 					<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
 						<PrimitiveParameters>
@@ -3660,7 +3663,7 @@ elif platform == "nx":
 						<material>
 							<GFXMaterialSerializable ATL_Channel="0" ATL_Path="" shaderPath="world/_common/matshader/multitexture_1layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 								<textureSet>
-									<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_map_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
+									<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_banner_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
 								</textureSet>
 								<materialParams>
 									<GFXMaterialSerializableParam Reflector_factor="0.000000" />
@@ -3766,26 +3769,6 @@ elif platform == "nx":
 </root>''')
     videoisc.close()
     #VideosCoach ISC
-    
-    #VideosCoachPreview ISC
-    videopreviewisc = open(cache_videoscoach + mapname.lower() + "_video_map_preview.isc.ckd", "w", encoding="utf-8")
-    videopreviewisc.write('''<?xml version="1.0" encoding="ISO-8859-1"?>
-<root>
-   <Scene ENGINE_VERSION="284789" GRIDUNIT="0.500000" DEPTH_SEPARATOR="0" NEAR_SEPARATOR="1.000000 0.000000 0.000000 0.000000, 0.000000 1.000000 0.000000 0.000000, 0.000000 0.000000 1.000000 0.000000, 0.000000 0.000000 0.000000 1.000000" FAR_SEPARATOR="1.000000 0.000000 0.000000 0.000000, 0.000000 1.000000 0.000000 0.000000, 0.000000 0.000000 1.000000 0.000000, 0.000000 0.000000 0.000000 1.000000" viewFamily="0">
-      <ACTORS NAME="Actor">
-         <Actor RELATIVEZ="-1.000000" SCALE="1.000000 1.000000" xFLIPPED="0" USERFRIENDLY="VideoScreen" MARKER="" DEFAULTENABLE="1" POS2D="0.000000 -4.500000" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="world/_common/videoscreen/video_player_map_preview.tpl">
-            <COMPONENTS NAME="PleoComponent">
-               <PleoComponent video="world/maps/''' + mapname.lower() + '''/videoscoach/''' + mapname.lower() + '''.webm" dashMPD="world/maps/''' + mapname.lower() + '''/videoscoach/''' + mapname.lower() + '''.mpd" channelID="''' + mapname + '''" />
-            </COMPONENTS>
-         </Actor>
-      </ACTORS>
-      <sceneConfigs>
-         <SceneConfigs activeSceneConfig="0" />
-      </sceneConfigs>
-   </Scene>
-</root>''')
-    videopreviewisc.close()
-    #VideosCoachPreview ISC
 
     #MAINSCENE ISC
     #MAINSCENE ISC
@@ -4069,7 +4052,7 @@ elif platform == "nx":
 							</Actor>
 						</ACTORS>
 						<ACTORS NAME="Actor">
-							<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_map_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+							<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_banner_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
 								<COMPONENTS NAME="MaterialGraphicComponent">
 									<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
 										<PrimitiveParameters>
@@ -4081,7 +4064,7 @@ elif platform == "nx":
 										<material>
 											<GFXMaterialSerializable ATL_Channel="0" ATL_Path="" shaderPath="world/_common/matshader/multitexture_1layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 												<textureSet>
-													<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_map_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
+													<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_banner_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
 												</textureSet>
 												<materialParams>
 													<GFXMaterialSerializableParam Reflector_factor="0.000000" />
@@ -4434,7 +4417,7 @@ elif platform == "nx":
 							</Actor>
 						</ACTORS>
 						<ACTORS NAME="Actor">
-							<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_map_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+							<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_banner_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
 								<COMPONENTS NAME="MaterialGraphicComponent">
 									<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
 										<PrimitiveParameters>
@@ -4446,7 +4429,7 @@ elif platform == "nx":
 										<material>
 											<GFXMaterialSerializable ATL_Channel="0" ATL_Path="" shaderPath="world/_common/matshader/multitexture_1layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 												<textureSet>
-													<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_map_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
+													<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_banner_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
 												</textureSet>
 												<materialParams>
 													<GFXMaterialSerializableParam Reflector_factor="0.000000" />
@@ -4824,7 +4807,7 @@ elif platform == "nx":
 							</Actor>
 						</ACTORS>
 						<ACTORS NAME="Actor">
-							<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_map_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+							<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_banner_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
 								<COMPONENTS NAME="MaterialGraphicComponent">
 									<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
 										<PrimitiveParameters>
@@ -4836,7 +4819,7 @@ elif platform == "nx":
 										<material>
 											<GFXMaterialSerializable ATL_Channel="0" ATL_Path="" shaderPath="world/_common/matshader/multitexture_1layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 												<textureSet>
-													<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_map_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
+													<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_banner_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
 												</textureSet>
 												<materialParams>
 													<GFXMaterialSerializableParam Reflector_factor="0.000000" />
@@ -5239,7 +5222,7 @@ elif platform == "nx":
 							</Actor>
 						</ACTORS>
 						<ACTORS NAME="Actor">
-							<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_map_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
+							<Actor RELATIVEZ="0.000000" SCALE="256.000000 128.000000" xFLIPPED="0" USERFRIENDLY="''' + mapname + '''_banner_bkg" MARKER="" POS2D="1487.410156 -32.732918" ANGLE="0.000000" INSTANCEDATAFILE="" LUA="enginedata/actortemplates/tpl_materialgraphiccomponent2d.tpl">
 								<COMPONENTS NAME="MaterialGraphicComponent">
 									<MaterialGraphicComponent colorComputerTagId="0" renderInTarget="0" disableLight="0" disableShadow="1" AtlasIndex="0" customAnchor="0.000000 0.000000" SinusAmplitude="0.000000 0.000000 0.000000" SinusSpeed="1.000000" AngleX="0.000000" AngleY="0.000000">
 										<PrimitiveParameters>
@@ -5251,7 +5234,7 @@ elif platform == "nx":
 										<material>
 											<GFXMaterialSerializable ATL_Channel="0" ATL_Path="" shaderPath="world/_common/matshader/multitexture_1layer.msh" stencilTest="0" alphaTest="4294967295" alphaRef="4294967295">
 												<textureSet>
-													<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_map_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
+													<GFXMaterialTexturePathSet diffuse="world/maps/''' + mapname.lower() + '''/menuart/textures/''' + mapname.lower() + '''_banner_bkg.tga" back_light="" normal="" separateAlpha="" diffuse_2="" back_light_2="" anim_impostor="" diffuse_3="" diffuse_4="" />
 												</textureSet>
 												<materialParams>
 													<GFXMaterialSerializableParam Reflector_factor="0.000000" />
@@ -5383,7 +5366,7 @@ elif platform == "nx":
     abname = (mapname.lower() + "_cover_albumcoach")
     makeTexAct(abname + ".tga", cache_act_menuart + abname + ".act.ckd")
 
-    bannername = (mapname.lower() + "_map_bkg")
+    bannername = (mapname.lower() + "_banner_bkg")
     makeTexAct(bannername + ".tga", cache_act_menuart + bannername + ".act.ckd")
 
     covergenericname = (mapname.lower() + "_cover_generic")
@@ -5392,19 +5375,19 @@ elif platform == "nx":
     coveronlinename = (mapname.lower() + "_cover_online")
     makeTexAct(coveronlinename + ".tga", cache_act_menuart + coveronlinename + ".act.ckd")
 
-    if(coachnum >= 1):
+    if(coachnum == 1):
         c1name = (mapname.lower() + "_coach_1")
         makeTexAct(c1name + ".tga", cache_act_menuart + c1name + ".act.ckd")
         
-    if(coachnum >= 2):
+    if(coachnum == 2):
         c2name = (mapname.lower() + "_coach_2")
         makeTexAct(c2name + ".tga", cache_act_menuart + c2name + ".act.ckd")
 
-    if(coachnum >= 3):
+    if(coachnum == 3):
         c3name = (mapname.lower() + "_coach_3")
         makeTexAct(c3name + ".tga", cache_act_menuart + c3name + ".act.ckd")
 
-    if(coachnum >= 4):
+    if(coachnum == 4):
         c4name = (mapname.lower() + "_coach_4")
         makeTexAct(c4name + ".tga", cache_act_menuart + c4name + ".act.ckd")
 
@@ -5497,31 +5480,6 @@ elif platform == "nx":
     videoscoachmpd.write(UltraWebm[1])
     videoscoachmpd.write(b'\x00\x00\x00\x00\x00\x00\x02\x58\x00\x00\x02\x58\x00\x00\x12\xB7')
     videoscoachmpd.close()
-
-    videoscoachpreviewact = open(cache_videoscoach + "video_player_map_preview.act.ckd", "wb")
-    ByteFileName = (mapname.lower() + ".webm").encode()
-    ByteFileName_Length = (len(ByteFileName).to_bytes(4, 'big'))
-    ByteMpdFileName = (mapname.lower() + ".mpd").encode()
-    ByteMpdFileName_Length = (len(ByteMpdFileName).to_bytes(4, 'big'))
-    fileHash1 = (randint(1000000000, 4000000000).to_bytes(4, 'big'))
-    BytePathFile = ("world/maps/" + mapname.lower() + "/videoscoach/").encode()
-    BytePathFile_Length = (len(BytePathFile).to_bytes(4, 'big'))
-    fileHash2 = (randint(1000000000, 4000000000).to_bytes(4, 'big'))
-    videoscoachpreviewact.write(b'\x00\x00\x00\x01\x00\x00\x00\x00\x3F\x80\x00\x00\x3F\x80\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\xFF\xFF\xFF\xFF\x00\x00\x00\x00\x00\x00\x00\x1C\x76\x69\x64\x65\x6F\x5F\x70\x6C\x61\x79\x65\x72\x5F\x6D\x61\x70\x5F\x70\x72\x65\x76\x69\x65\x77\x2E\x74\x70\x6C\x00\x00\x00\x1A\x77\x6F\x72\x6C\x64\x2F\x5F\x63\x6F\x6D\x6D\x6F\x6E\x2F\x76\x69\x64\x65\x6F\x73\x63\x72\x65\x65\x6E\x2F\xD3\x94\x54\x28\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x01\x12\x63\xDA\xD9')
-    videoscoachpreviewact.write(ByteFileName_Length)
-    videoscoachpreviewact.write(ByteFileName)
-    videoscoachpreviewact.write(BytePathFile_Length)
-    videoscoachpreviewact.write(BytePathFile)
-    videoscoachpreviewact.write(fileHash1)
-    videoscoachpreviewact.write(b'\x00\x00\x00\x00')
-    videoscoachpreviewact.write(ByteMpdFileName_Length)
-    videoscoachpreviewact.write(ByteMpdFileName)
-    videoscoachpreviewact.write(BytePathFile_Length)
-    videoscoachpreviewact.write(BytePathFile)
-    videoscoachpreviewact.write(fileHash2)
-    videoscoachpreviewact.write(b'\x00\x00\x00\x00\x00\x00\x00\x00')
-    videoscoachpreviewact.write(BytePathFile = " + mapname.lower() + ")
-    videoscoachpreviewact.close
     #ACT FILES
     #ACT FILES
     #ACT FILES
@@ -5544,13 +5502,14 @@ elif platform == "nx":
         full_file_name= os.path.join('input//textures', file_name)
         if os.path.isfile(full_file_name):
             shutil.copy(full_file_name, 'output//'+mapnamelow+'_nx//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//menuart//textures')
-    shutil.copy('output//temp//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//audio//'+mapnamelow+'_musictrack.tpl.ckd', 'output//'+mapnamelow+'_pc//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//audio//')
+    shutil.copy('output//temp//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//audio//'+mapnamelow+'_musictrack.tpl.ckd', 'output//'+mapnamelow+'_nx//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//audio//')
     shutil.copy('output//temp//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//timeline//' + mapname.lower() + '_tml_dance.dtape.ckd', 'output//'+mapnamelow+'_nx//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//timeline//')
     shutil.copy('output//temp//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//songdesc.tpl.ckd', 'output//'+mapnamelow+'_nx//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//songdesc.tpl.ckd')
     shutil.copy('output//temp//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//timeline//'+mapnamelow+'_tml_karaoke.ktape.ckd', 'output//'+mapnamelow+'_nx//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//timeline//')
     shutil.copy('input//'+mapnamelow+'_main_scene_nx.ipk', 'output//'+mapnamelow+'_nx.ipk')
-    shutil.copy('input//'+mapnamelow+'.webm', 'output//'+mapnamelow+'_nx//world//maps//'+mapnamelow+'//videoscoach//'+mapnamelow+'.webm')
+    shutil.copy('input//'+mapnamelow+'.webm', 'output//'+mapnamelow+'_nx//world//maps//'+mapnamelow+'//videoscoach//'+mapnamelow+'.vp9.720.webm')
     shutil.copy('input//'+mapnamelow+'.ogg', 'output//'+mapnamelow+'_nx//world//maps//'+mapnamelow+'//audio//'+mapnamelow+'.ogg')
+    os.system('bin\\unpakke.exe modules\\ubiart.umod pack output\\'+mapnamelow+'_nx output\\'+mapnamelow+'_nx.ipk')
     # removing temp
     os.rmdir('output//temp//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//audio')
     os.rmdir('output//temp//cache//itf_cooked//nx//world//maps//'+mapnamelow+'//autodance')
